@@ -1,0 +1,16 @@
+[package]
+name = "hive_brain"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+candle-core = "0.9"
+rand = "0.8"
+ratatui = "0.29"
+
+[profile.release]
+opt-level = 3
+
+# `cargo run` alone is fast enough: optimise the dev profile too.
+[profile.dev]
+opt-level = 3
